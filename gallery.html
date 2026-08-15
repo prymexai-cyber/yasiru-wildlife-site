@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Center | Yasiru Gunasinghe Wildlife Photography</title>
+<meta name="description" content="Browse the full wildlife photography gallery by Yasiru Gunasinghe — Sri Lankan leopards, elephants and birdlife. Click any photo to zoom, then buy via WhatsApp.">
+<link rel="canonical" href="https://www.yasirugunasinghe.com/gallery.html">
+<link rel="icon" type="image/jpeg" href="Yash Wild Photography logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-whatsapp-number="14028087890">
+
+<div class="bg-wash"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============ NAVIGATION (same on every page — edit consistently) ============ -->
+<header>
+  <div class="navbar glass">
+    <a href="index.html" class="brand">
+      <div class="logo-slot"><img src="Yash Wild Photography logo.jpg"></div>
+      <div class="brand-name">Yasiru Gunasinghe<span>Wildlife Photography</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a href="gallery.html" class="active">Media Center</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="btn small primary">Enquire</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="what-we-do.html">What We Do</a>
+  <a href="gallery.html" class="active">Media Center</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- ============ PAGE HERO — EDIT: banner image, eyebrow, headline ============ -->
+<section class="hero-pagehead" style="background-image:url('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?q=80&w=1800&auto=format&fit=crop');">
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="eyebrow on-dark">MEDIA CENTER</div>
+      <h1 class="headline">The full <em>field archive.</em></h1>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="gallery-toolbar reveal">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="eyebrow">BROWSE &amp; PURCHASE</div>
+        <h2>Fine art <em>prints</em>,<br>original files.</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-end;">
+        <div class="search-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="gallerySearch" placeholder="Search by tag, species, park…">
+        </div>
+        <!-- Filter buttons are generated automatically from each photo's data-photo-category below -->
+        <div class="filters" id="filters"></div>
+      </div>
+    </div>
+
+    <p style="font-family:var(--mono);font-size:11px;color:var(--mist-soft);margin:-30px 0 30px;">Tip: click any photograph to open a full-screen zoom view.</p>
+
+    <!-- ============================================================
+         GALLERY GRID
+         TO ADD A PHOTO: copy one <article class="photo-card">…</article>
+         block below, edit the image src/alt and every data-photo-*
+         attribute (title, id, location, price, category, tags). The
+         watermark and click-to-zoom lightbox both work automatically
+         — nothing else to wire up.
+         ============================================================ -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- ---- PHOTO CARD 1 ---- -->
+      <article class="photo-card" data-size="tall">
+        <div class="photo-frame lightbox-item"
+             data-photo-title="Common Tailorbird"
+             data-photo-location="Sri Lanka"
+            
+             data-photo-id="YG-001">
+          <img src="Common Tailorbird.jpg" alt="Common Tailorbird">
+          <div class="overlay-top">
+            <span class="id-tag">YG-001</span>
+            <span class="protected-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l7 4v6c0 5-3.4 8-7 10-3.6-2-7-5-7-10V6l7-4z"/></svg>PROTECTED</span>
+          </div>
+          <div class="media-overlay">
+            <div class="overlay-info">
+              <h3>Common Tailorbird</h3>
+              <div class="overlay-meta">Sri Lanka</div>
+              <div class="buy-row">
+               
+                <button class="buy-btn" type="button" data-photo-title="Common Tailorbird" data-photo-id="YG-001" data-photo-location="Sri Lanka">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.87 9.87 0 004.71 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="photo-caption"><span class="cap-title">Common Tailorbird</span><span class="cap-loc">Sri Lanka </span></div>
+      </article>
+
+      <!-- ---- PHOTO CARD 2 ---- -->
+      <article class="photo-card">
+        <div class="photo-frame lightbox-item"
+             data-photo-title="House Sparrow"
+             data-photo-location="Sri Lanka"
+            
+             data-photo-id="YG-002">
+          <img src="House Sparrow.jpg" alt="House Sparrow">
+          <div class="overlay-top">
+            <span class="id-tag">YG-002</span>
+            <span class="protected-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l7 4v6c0 5-3.4 8-7 10-3.6-2-7-5-7-10V6l7-4z"/></svg>PROTECTED</span>
+          </div>
+          <div class="media-overlay">
+            <div class="overlay-info">
+              <h3>House Sparrow</h3>
+              <div class="overlay-meta">Sri Lanka</div>
+              <div class="buy-row">
+              
+                <button class="buy-btn" type="button" data-photo-title="House Sparrowk" data-photo-id="YG-002" data-photo-location="Sri Lanka">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.87 9.87 0 004.71 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="photo-caption"><span class="cap-title">House Sparrow</span><span class="cap-loc"></span></div>
+      </article>
+
+      <!-- ---- PHOTO CARD 3 ---- -->
+      <article class="photo-card">
+        <div class="photo-frame lightbox-item"
+             data-photo-title="Palm Squirrel"
+             data-photo-location=" Sri Lanka"
+           
+             data-photo-id="YG-003">
+          <img src="Palm Squirrel.jpeg" alt="Palm Squirrel">
+          <div class="overlay-top">
+            <span class="id-tag">YG-003</span>
+            <span class="protected-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l7 4v6c0 5-3.4 8-7 10-3.6-2-7-5-7-10V6l7-4z"/></svg>PROTECTED</span>
+          </div>
+          <div class="media-overlay">
+            <div class="overlay-info">
+              <h3>Palm Squirrel</h3>
+              <div class="overlay-meta">Sri Lanka</div>
+              <div class="buy-row">
+               
+                <button class="buy-btn" type="button" data-photo-title="Palm Squirrel" data-photo-id="YG-003" data-photo-location=" Sri Lanka">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.87 9.87 0 004.71 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="photo-caption"><span class="cap-title">Palm Squirrel</span><span class="cap-loc"></span></div>
+      </article>
+
+    
+    </div>
+
+    <div class="empty-state" id="galleryEmptyState" style="display:none;">No photographs match that search — try a different keyword or tag.</div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============ CTA — EDIT: heading, subtext, WhatsApp message ============ -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-panel glass reveal">
+      <h2>Don't see what you're <em>looking for?</em></h2>
+      <p>The full archive runs deeper than what's shown here — message directly for unpublished work or specific species requests.</p>
+      <div class="cta-actions">
+        <a class="btn primary" href="#" data-whatsapp-msg="Hello Yasiru, I'm looking for a specific wildlife photo that may not be published on your site yet.">Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (same on every page — edit consistently) ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Yasiru Gunasinghe <em>Wildlife Photography</em></div>
+        <p style="color:var(--mist);font-size:13px;margin-top:10px;max-width:260px;">WNPS Member No. 14290 &middot; Sri Lanka</p>
+      </div>
+      <div class="footer-col">
+        <h5>Site</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="gallery.html">Media Center</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://www.facebook.com/profile.php?id=100081124653240" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/Yasiru_Gunasinghe" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.behance.net/yasiruphotogr" target="_blank" rel="noopener">Behance</a>
+        <a href="mailto:yashphotography.lk0@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-note">&copy; <span class="js-year"></span> Yasiru Gunasinghe Wildlife Photography — WNPS Member No. 14290. All images protected; unauthorised reproduction prohibited.</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
